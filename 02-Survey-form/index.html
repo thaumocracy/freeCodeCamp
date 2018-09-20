@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="main__header">
+            Survey Form
+        </h1>
+    </header>
+    <main class="content">
+        <p class="content__text">
+            Let us know how we can improve freeCodeCamp
+        </p>
+        <section>
+            <form action="POST">
+                <label>Name<input type="text" placeholder="Enter your name"></label>
+                <label>Email<input type="email" placeholder="Enter your Email"></label>
+                <label>Age<input type="number" placeholder="Age"></label>
+                <label for="role">Which option best describes your current role?</label>
+                <select name="role" id="role">
+                    <option value="0" disabled>Select an option</option>
+                    <option value="1">Student</option>
+                    <option value="2">Full time job</option>
+                    <option value="3">Full time learner</option>
+                    <option value="4">Prefer not to say</option>
+                    <option value="5">Other</option>
+                </select>
+                <label for="likes">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+                <ul id="likes">
+                    <li><label><input type="radio" name="radio">Definitely</label></li>
+                    <li><label><input type="radio" name="radio">Maybe</label></li>
+                    <li><label><input type="radio" name="radio">Not sure</label></li>     
+                 </ul>
+                <label>What do you like most in FCC:
+                    <select name="favorite" id="fav">
+                        <option value="0">Select an option</option>
+                        <option value="1">Challenges</option>
+                        <option value="2">Projects</option>
+                        <option value="3">Community</option>
+                        <option value="4">Open Source</option>
+                    </select>
+                </label>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+
