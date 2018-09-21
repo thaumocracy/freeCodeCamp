@@ -6,21 +6,23 @@
 
 <body>
     <header>
-        <h1 class="main__header">
+        <h1 class="main__header" id="title">
             Survey Form
         </h1>
     </header>
     <main class="content">
-        <p class="content__text">
+        <p class="content__text" id="description">
             Let us know how we can improve freeCodeCamp
         </p>
         <section>
-            <form action="POST">
-                <label>Name<input type="text" placeholder="Enter your name"></label>
-                <label>Email<input type="email" placeholder="Enter your Email"></label>
-                <label>Age<input type="number" placeholder="Age"></label>
+            <form action="#" id="survey-form">
+                <div>
+                    <label id="name-label">Name<input type="text" placeholder="Enter your name" id="name" required></label>
+                    <label id="email-label">Email<input type="email" placeholder="Enter your Email" id="email" required></label>
+                    <label id="number-label">Age<input type="number" placeholder="Age" id="number" min="16" max="100" required></label>
+                </div>
                 <label for="role">Which option best describes your current role?</label>
-                <select name="role" id="role">
+                <select name="role" id="dropdown">
                     <option value="0" disabled>Select an option</option>
                     <option value="1">Student</option>
                     <option value="2">Full time job</option>
@@ -30,9 +32,9 @@
                 </select>
                 <label for="likes">* How likely is that you would recommend freeCodeCamp to a friend?</label>
                 <ul id="likes">
-                    <li><label><input type="radio" name="radio">Definitely</label></li>
-                    <li><label><input type="radio" name="radio">Maybe</label></li>
-                    <li><label><input type="radio" name="radio">Not sure</label></li>     
+                    <li><label><input type="radio" name="radio" value="1">Definitely</label></li>
+                    <li><label><input type="radio" name="radio" value="2">Maybe</label></li>
+                    <li><label><input type="radio" name="radio" value="3">Not sure</label></li>     
                  </ul>
                 <label>What do you like most in FCC:
                     <select name="favorite" id="fav">
@@ -43,6 +45,22 @@
                         <option value="4">Open Source</option>
                     </select>
                 </label>
+                <div class="checkboxes">
+                    <label for="">Things that should be improved in the future (Check all that apply):</label>
+                    <label><input type="checkbox">Front-end Projects</label>
+                    <label><input type="checkbox">Back-end Projects</label>
+                    <label><input type="checkbox">Data Visualization</label>
+                    <label><input type="checkbox">Challenges</label>
+                    <label><input type="checkbox">Open Source Community</label>
+                    <label><input type="checkbox">Gitter help rooms</label>
+                    <label><input type="checkbox">Videos</label>
+                    <label><input type="checkbox">City Meetups</label>
+                    <label><input type="checkbox">Wiki</label>
+                    <label><input type="checkbox">Forum</label>
+                    <label><input type="checkbox">Additional Courses</label>
+                </div>
+                <label>Any Comments or Suggestions?<textarea name="" id="" cols="30" rows="10"></textarea></label>
+                <input type="submit" value="submit" id="submit">
             </form>
         </section>
     </main>
