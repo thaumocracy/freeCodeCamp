@@ -61,3 +61,73 @@ function truncateString(str, num) {
     let truncate = str.split('').slice(0,num).join('');
     return num >= str.length ? str : truncate + "..."
   }
+
+function findElement(arr, func) {
+let num = 0;
+
+    for(let i = 0; i < arr.length; i++) {
+        num = arr[i];
+        if (func(num)) {
+        return num;
+        }
+    }
+return undefined;
+}
+
+
+function booWho(bool) {
+    // What is the new fad diet for ghost developers? The Boolean.
+    return typeof bool === 'boolean' ? true : false
+}
+
+
+function titleCase(str) {
+    let array = str.split(' ');
+    for(let i = 0;i < array.length;i++){
+      let innerArray = array[i].toLowerCase().split('');
+      innerArray[0] = innerArray[0].toUpperCase();
+      array[i] = innerArray.join('');
+    }
+    return array.join(' ');
+  }
+  
+
+function frankenSplice(arr1, arr2, n) {
+// It's alive. It's alive!
+let newArr = [...arr2]
+newArr.splice(n,0,...arr1)
+return newArr;
+}
+
+
+function bouncer(arr) {
+    // Don't show a false ID to this bouncer.
+    return arr.filter(item => item ? true : false);
+  }
+
+function getIndexToIns(arr, num) {
+    arr.push(num);
+    arr.sort((a, b) => {return a - b});
+return arr.indexOf(num);
+}
+
+function mutation(arr) {
+
+let test = arr[1].toLowerCase();
+let target = arr[0].toLowerCase();
+    for (let i=0;i<test.length;i++) {
+        if (target.indexOf(test[i]) < 0)
+        return false;
+    }
+return true;
+}
+
+function chunkArrayInGroups(arr, size) {
+    // Break it up.
+    var arr2 = [];
+    for (var i = 0; i < arr.length; i += size) {
+        arr2.push(arr.slice(i , i + size));
+    }
+    return arr2;
+  }
+  
